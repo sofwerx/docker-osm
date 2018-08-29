@@ -18,5 +18,10 @@ RUN pip3 install -r /home/requirements.txt
 
 ADD importer.py /home/
 
+ADD settings/ /home/settings/
+
+VOLUME /home/settingsk
+
 WORKDIR /home
+
 CMD ["python3", "-u", "/home/importer.py"]
